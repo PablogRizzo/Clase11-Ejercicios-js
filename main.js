@@ -90,12 +90,11 @@ console.log(aFarenheit(10));
 
 console.log("Ejercicio 5");
 
-function fechaYhora(date){
-    var dia = date.getDay();
-    var hora = date.getHours()
-    var minutos = date.getMinutes();
-    console.log( `Hoy es : ${date.getDay()}
-Hora Actual: ${hora}:${minutos}` );
+function fechaYhora(){
+    let hora = new Date();
+    var dias = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+    console.log( `Hoy es : ${dias[hora.getDay()]}
+Hora Actual: ${hora.getHours()}:${hora.getMinutes()}` );
 }
 
-fechaYhora(new Date());
+fechaYhora();
