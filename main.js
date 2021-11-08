@@ -4,19 +4,21 @@
 // Ricardo = "Ricardo es tu tio", Roberto = "Roberto es tu hermano", Argentina = "El país al que perteneces"
 // Dinamita = "Es tu gato"
 
-console.log("Ejercicio 1");
+console.log("-----------------Ejercicio 1-----------------");
+
 
 function alzeimer(nombre){
-    if(nombre == "Ricardo"){
-        console.log(nombre + " es tu tio");
-    }else if(nombre == "Roberto"){
-        console.log(nombre + " es tu hermano");
-    }else if(nombre == "Argentina"){
-        console.log(nombre + " es El pais al que perteneces");
-    }else if(nombre == "Dinamita"){
-        console.log(nombre + " es tu gato");
-    }else{
-        console.log(nombre + " no es nada.");
+
+    switch(nombre) {
+        case "Ricardo": console.log(nombre + " es tu tio");
+            break;
+        case "Roberto": console.log(nombre + " es tu hermano");
+            break;
+        case "Argentina": console.log(nombre + " es el pais al que perteneces");
+            break;
+        case "Dinamita": console.log(nombre + " es tu gato");
+            break;
+        default: console.log(nombre + " no es nada");
     }
 }
 
@@ -27,13 +29,12 @@ alzeimer("Dinamita");
 alzeimer("Ramon");
 
 
-
 // Ejercicio Nº2
 // Crear una función que tome como parametro 2 numeros y retorne true si alguno es 100 o si la suma de ambos es 100
 
-console.log("Ejercicio 2");
+console.log("-----------------Ejercicio 2-----------------");
 
-function compararNumeros(num1,num2){
+const compararNumeros = (num1,num2) => {
     if(num1 == 100 || num2 == 100 || num1+num2 == 100){
         return true;
     }
@@ -47,7 +48,7 @@ console.log(compararNumeros(100,5));
 // Ejercicio Nº3
 // Pasado un string "index.html", "script.js" debe devolver la extension del archivo ej: ".js"
 
-console.log("Ejercicio 3");
+console.log("-----------------Ejercicio 3-----------------");
 
 function extension(string){
     r = string.split(".");
@@ -67,16 +68,10 @@ console.log(extension("indexhtml"));
 // (faren- 32) * 5 / 9;
 // * 9 / 5 + 32;
 
-console.log("Ejercicio 4");
+console.log("-----------------Ejercicio 4-----------------");
 
-function aCentigrados(temperatura){
-    return (temperatura - 32)* 5 / 9;
-}
-
-
-function aFarenheit(temperatura){
-    return (temperatura * 9) / (5 + 32);
-}
+const aCentigrados = temperatura => (temperatura - 32)* 5/9;
+const aFarenheit = temperatura => (temperatura * 9) / (5 + 32);
 
 console.log(aCentigrados(10));
 console.log(aFarenheit(10));
@@ -88,13 +83,13 @@ console.log(aFarenheit(10));
     Hora actual: 10:34
 */
 
-console.log("Ejercicio 5");
+console.log("-----------------Ejercicio 5-----------------");
 
 function fechaYhora(){
     let hora = new Date();
     var dias = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
     console.log( `Hoy es : ${dias[hora.getDay()]}
-Hora Actual: ${hora.getHours()}:${hora.getMinutes()}` );
+Hora Actual: ${hora.getHours()}:${hora.getMinutes()}`);
 }
 
 fechaYhora();
